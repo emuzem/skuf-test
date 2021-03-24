@@ -1,0 +1,63 @@
+$blue-badge: #d0eaf6;
+$gray-badge: #e2e1e2;
+$red-badge: #f8a4a9;
+$major-badge: #f6b6ad;
+$orange: #fbcdac;
+$yellow: #fceaae;
+$gray-blue: #dce6ff;
+$green: #cfe0ac;
+$light-blue: #06b2f5;
+$main-blue: #03a9f4;
+
+.blue {
+  background-color: $blue-badge;
+  &:hover {
+    background-color: #bfd7f2;
+  }
+}
+
+.disabled {
+  background-color: $gray-badge;
+  &:hover {
+    background-color: #d0cfd0;
+  }
+}
+
+.red {
+  background-color: $red-badge;
+  &:hover {
+    background-color: #e4979b;
+  }
+}
+.major {
+  background-color: $major-badge;
+  &:hover {
+    background-color: #e2a79f;
+  }
+}
+.orange {
+  background-color: $orange;
+  &:hover {
+    background-color: #e7bd9e;
+  }
+}
+
+.yellow {
+  background-color: $yellow;
+  &:hover {
+    background-color: #e8d7a0;
+  }
+}
+
+.gray-blue {
+  background-color: $gray-blue;
+  &:hover {
+    background-color: #cad4eb;
+  }
+}
+.green {
+  background-color: $green;
+  &:hover {
+    background-color: #bece9e;
+  }
+}

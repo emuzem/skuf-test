@@ -1,0 +1,95 @@
+.filters {
+  margin-top: 55px;
+
+  &__heading {
+    font-size: 20px;
+    line-height: 23px;
+    color: rgba(0, 0, 0, 0.87);
+    letter-spacing: 0.15px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+
+    * {
+      margin-right: 5px;
+    }
+  }
+
+  &__description {
+    min-width: 85px;
+  }
+
+  &__badge {
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 16px;
+    display: block;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: bold;
+    margin: 3px;
+
+    .fa-check {
+      font-weight: lighter;
+    }
+
+    em {
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.6);
+      font-weight: bold;
+      margin-left: 3px;
+    }
+  }
+
+  &__system-filter {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 1px;
+
+    .form-check-input {
+      width: 18px;
+      height: 18px;
+    }
+    .form-check-label {
+      margin-top: 2px;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.014em;
+      color: rgba(0, 0, 0, 0.87);
+      font-weight: bold;
+      margin-left: 15px;
+      cursor: pointer;
+    }
+  }
+
+  &__choose {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: $light-blue;
+  }
+  &__counter {
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.014em;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  &__choose-btn {
+    border-left: solid 2px #f6f5f6;
+    padding-left: 15px;
+    font-weight: bold;
+  }
+
+  &__current {
+    background-color: white;
+    padding: 15px;
+  }
+}

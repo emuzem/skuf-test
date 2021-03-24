@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="rus">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Панель мониторинга</title>
+</head>
+<body>
+<header class="page-header d-flex justify-content-between align-items-center">
+    <div class="page-header__links">
+        <button class="page-header__menu-btn btn-simple"><img class="page-header__menu-img" src="./img/menu.png"
+                                                              alt="Меню">
+        </button>
+        <a class="page-header__link page-header__link--active" href="#">Техпортал СКУФ</a> /
+        <a class="page-header__link" href="#">Панель событий</a>
+    </div>
+    <div class="page-header__options d-flex align-items-center">
+        <div class="page-header__search">
+            <span><i class="fa fa-search"></i></span>
+            <input type="search" name="page-header__search" id="page-header__search" placeholder="Поиск"/>
+        </div>
+        <div class="page-header__user">
+            <select name="user">
+                <option selected>Платонова Людмила</option>
+            </select>
+            <img src="img/drop.png" alt="drop">
+        </div>
+        <a class="page-header__option" href="#"><img src="img/library.png" alt="library" class="page-header__icon"></a>
+        <button class="page-header__option btn-simple"><img src="img/fullscreen.png" alt="fullscreen"
+                                                            class="page-header__icon">
+        </button>
+        <a class="page-header__option" href="#"><img src="img/exit.png" class="page-header__icon"></a>
+    </div>
+</header>
+<div class="layout">
+    <nav class="menu">
+        <ul class="menu__list">
+            <li class="menu__item">
+                <a href="#">
+                    <img src="img/dashboard.png" alt="dashboard">
+                </a>
+            </li>
+        </ul>
+        <ul class="menu__list">
+            <li class="menu__item">
+                <a href="#">INC</a>
+            </li>
+            <li class="menu__item">
+                <a href="#">TAS</a>
+            </li>
+            <li class="menu__item">
+                <a href="#">CRQ</a>
+            </li>
+            <li class="menu__item">
+                <a href="#">PBI</a>
+            </li>
+            <li class="menu__item">
+                <a href="#">RLM</a>
+            </li>
+            <li class="menu__item active">
+                <a href="#">EVT</a>
+            </li>
+            <li class="menu__item">
+                <a href="#">DEV</a>
+            </li>
+        </ul>
+        <ul class="menu__list">
+            <li class="menu__item">
+                <a href="#">
+                    <img src="img/Chart.png" alt="chart">
+                </a>
+            </li>
+            <li class="menu__item">
+                <a href="#">
+                    <img src="img/work.png" alt="work">
+                </a>
+            </li>
+            <li class="menu__item">
+                <a href="#">
+                    <img src="img/alerts.png" alt="alerts">
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section class="filters">
+            <p class="filters__heading">Фильтры панели событий</p>
+            <div class="filters__list">
+                <p class="filters__description p-little">Статус</p>
+                <span class="filters__badge blue"><img src="img/Mask.png" alt="checked">OPEN <em>2568</em></span>
+                <span class="filters__badge blue"><img src="img/Mask.png" alt="checked">CLOSED <em>712</em></span>
+                <span class="filters__badge gray"><i class="far fa-square"></i>ACK <em>2568</em></span>
+                <span class="filters__badge blue"><img src="img/Mask.png" alt="checked">BLACKOUT <em>2568</em></span>
+            </div>
+            <div class="filters__list">
+                <p class="filters__description p-little">Критичность</p>
+                <span class="filters__badge red"><img src="img/Mask.png" alt="checked">CRITICAL<em>2568</em></span>
+                <span class="filters__badge major"><img src="img/Mask.png" alt="checked">MAJOR<em>2568</em></span>
+                <span class="filters__badge orange"><img src="img/Mask.png" alt="checked">MINOR<em>2568</em></span>
+                <span class="filters__badge yellow"><img src="img/Mask.png" alt="checked">WARNING<em>2568</em></span>
+                <span class="filters__badge gray-blue"><img src="img/Mask.png"
+                                                            alt="checked">INFORMATION<em>2568</em></span>
+                <span class="filters__badge green"><img src="img/Mask.png" alt="checked">OK<em>2568</em></span>
+            </div>
+
+            <div class="filters__system-filter d-flex justify-content-between align-items-center">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="filter" id="system-filter" checked>
+                    <label class="form-check-label" for="system-filter">
+                        Фильтрация по системам
+                    </label>
+                </div>
+                <div>
+                    <button class="filters__choose text-wide">Выбрать системы</button>
+                    <span class="filters__counter p-little">120/280</span>
+                    <button class="filters__choose-btn btn-simple"><i class="fa fa-angle-up"></i></button>
+                </div>
+            </div>
+            <div class="filters__current hide">
+                <div class="filters__list">
+                    <span class="filters__badge gray-blue"><img src="img/Mask.png"
+                                                               alt="checked">1C предприятие<em>2568</em></span>
+                    <span class="filters__badge red"><img src="img/Mask.png"
+                                                          alt="checked">07.мониторинг<em>2568</em></span>
+                    <span class="filters__badge green"><img src="img/Mask.png" alt="checked">акэос<em>2568</em></span>
+                    <span class="filters__badge gray"><i class="far fa-square"></i>СКУФ АВТОТЕСТ<em>2568</em></span>
+                    <span class="filters__badge yellow"><img src="img/Mask.png"
+                                                             alt="checked">телигент<em>2568</em></span>
+                    <span class="filters__badge yellow"><img src="img/Mask.png" alt="checked">фабуза<em>2568</em></span>
+                    <span class="filters__badge yellow"><img src="img/Mask.png"
+                                                             alt="checked">1C предприятие<em>2568</em></span>
+                    <span class="filters__badge green"><img src="img/Mask.png" alt="checked">1C предприятие<em>2568</em></span>
+                    <span class="filters__badge red"><img src="img/Mask.png"
+                                                          alt="checked">1C предприятие<em>2568</em></span>
+                    <span class="filters__badge red"><img src="img/Mask.png"
+                                                          alt="checked">1C предприятие<em>2568</em></span>
+                    <span class="filters__badge red"><img src="img/Mask.png"
+                                                          alt="checked">1C предприятие<em>2568</em></span>
+                </div>
+            </div>
+        </section>
+        <div class="info">
+            <ul class="info__nav d-flex ">
+                <li class="nav__link text-wide"><input class="tab" type="radio" name="tab-btn" id="tab-btn-1" value="">
+                    <label for="tab-btn-1">ОПИСАНИЕ И РЕШЕНИЕ</label></li>
+                <li class="nav__link text-wide"><input class="tab" type="radio" name="tab-btn" id="tab-btn-2" value="">
+                    <label for="tab-btn-2">ПОЛЬЗОВАТЕЛЬ</label></li>
+                <li class="nav__link text-wide"><input class="tab" type="radio" name="tab-btn" id="tab-btn-3" value="">
+                    <label for="tab-btn-3">СМЭВ</label></li>
+                <li class="nav__link text-wide"><input class="tab" type="radio" name="tab-btn" id="tab-btn-4" value="">
+                    <label for="tab-btn-4">СВЯЗИ</label></li>
+                <li class="nav__link text-wide"><input class="tab" type="radio" name="tab-btn" id="tab-btn-5" value="">
+                    <label for="tab-btn-5">ЗАДАЧИ</label></li>
+                <li class="nav__link text-wide"><input class="tab" type="radio" name="tab-btn" id="tab-btn-6" value="">
+                    <label for="tab-btn-6">ТРУДОЗАТРАТЫ</label></li>
+                <li class="nav__link text-wide">
+                    <input class="tab" type="radio" name="tab-btn" id="tab-btn-7" value="">
+                    <label for="tab-btn-7">ДАТА/СИСТЕМА</label>
+                </li>
+                <li class="nav__link text-wide active"><input class="tab" type="radio" name="tab-btn" id="tab-btn-8" value="">
+                    <label for="tab-btn-8">СОБЫТИЯ</label></li>
+            </ul>
+
+            <div class="content">
+                Содержимое 1...
+            </div>
+            <div class="content">
+                Содержимое 2...
+            </div>
+            <div class="content">
+                Содержимое 3...
+            </div>
+            <div class="content">
+                Содержимое 4...
+            </div>
+            <div class="content">
+                Содержимое 5...
+            </div>
+            <div class="content">
+                Содержимое 6...
+            </div>
+            <div class="content">
+                Содержимое 7...
+            </div>
+            <div class="content events">
+                <div class="events">
+                    <div class="events__options d-flex justify-content-between align-items-center">
+                        <p class="events__alert text-wide">Выделено 1 событие</p>
+                        <div class="events__search">
+                            <span><i class="fa fa-search"></i></span>
+                            <input type="search" name="events-search" id="events-search" placeholder="Поиск"/>
+                        </div>
+                        <div>
+                            <button class="events__option btn-simple"><img class="events__icon" src="img/Ack.png"
+                                                                           alt="ok">
+                            </button>
+                            <button class="events__option btn-simple"><img class="events__icon" src="img/Archive.png"
+                                                                           alt="архивировать"></button>
+                            <button class="events__option btn-simple"><img class="events__icon" src="img/3.2.png"
+                                                                           alt="добавить"></button>
+                            <button class="events__option btn-simple"><img class="events__icon" src="img/3.3.png">
+                            </button>
+                            <button class="events__option btn-simple"><img class="events__icon" src="img/6.1.png">
+                            </button>
+                            <button class="events__option btn-simple"><img class="events__icon" src="img/Chart.png"
+                                                                           alt="чарт"></button>
+                            <button class="events__option btn-simple"><img class="events__icon" src="img/Details.png"
+                                                                           alt="детали"></button>
+                            <button class="events__option btn-simple"><img class="events__icon" src="img/CSV.png"
+                                                                           alt="CSV">
+                            </button>
+                            <button class="events__option btn-simple"><img class="events__icon" src="img/JSON.png"
+                                                                           alt="JSON"></button>
+                            <button class="events__option btn-simple"><img class="events__icon"
+                                                                           src="img/baseline-fullscreen-24px%20(1).png"
+                                                                           alt="полный экран"></button>
+                        </div>
+                    </div>
+                    <div class="events__table">
+                        <div>
+                            <table>
+                                <thead class="p-little">
+                                <tr>
+                                    <th><i class="fa fa-minus-square text-primary"></i> Статус</th>
+                                    <th><img src="img/crit.png" alt="criteria"></th>
+                                    <th><img src="img/prio.png" alt="priority"></th>
+                                    <th>Дата</th>
+                                    <th>Категория</th>
+                                    <th>№ инцидента</th>
+                                    <th>Сервис</th>
+                                    <th>Текст события</th>
+                                    <th>Хост</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="status">
+                                        <input class="form-check-input" type="checkbox" value="filter" id="BLK">
+                                        <label class="form-check-label" for="BLK">
+                                            BLK
+                                        </label>
+                                    </td>
+                                    <td><img src="img/1.png" alt="blue"></td>
+                                    <td>4</td>
+                                    <td>26.09.18, 19:35</td>
+                                    <td>Oxygen</td>
+                                    <td class="events__incident">22468925215640</td>
+                                    <td>СКУФ автотест</td>
+                                    <td>Устройство не отвечает</td>
+                                    <td>hfu7h3993bfji7474n3njf76</td>
+                                </tr>
+                                <tr>
+                                    <td class="status">
+                                        <input class="form-check-input" type="checkbox" value="filter" id="OPEN">
+                                        <label class="form-check-label" for="OPEN">
+                                            OPEN
+                                        </label>
+                                    </td>
+                                    <td><img src="img/baseline-label_important-24px.png" alt="important"></td>
+                                    <td style="color: #cb842b">3</td>
+                                    <td>24.09.18, 16:00</td>
+                                    <td>Oxygen</td>
+                                    <td class="events__incident">22468925215640</td>
+                                    <td>1C предприятие</td>
+                                    <td>Производительность снижена, требуется техобслуживание</td>
+                                    <td>uc4fmy854yf5894nwdu45tu58nt</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <footer class="events__footer d-flex justify-content-between align-items-baseline">
+                    <p class="p-little">23 активных события</p>
+                    <div class="events__pagination">
+                        <p class="p-little">100 из 2472</p>
+                        <button class="btn-simple"><img src="img/baseline-more_vert-24px%20(1).png" alt="more"></button>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <section class="confirmation d-flex justify-content-between align-items-center">
+            <div>
+                <button class="confirmation__edit text-wide btn-blue">Изменить статус</button>
+            </div>
+            <div>
+                <button class="btn-simple confirmation__save text-wide">Сохранить</button>
+                <button class="btn-simple confirmation__return text-wide">Отмена</button>
+            </div>
+        </section>
+
+        <section class="details">
+            <p class="p-little details__heading">
+                Детали инцидента
+            </p>
+            <div class="details__theme">
+                <label for="details-theme" class="details__label p-little">Тема</label>
+                <input class="details__input" name="details-theme" value="Оплата начислений" id="details-theme">
+            </div>
+
+            <div class="details__data d-flex justify-content-between">
+                <div>
+                    <label for="details-region" class="details__label p-little">Регион</label>
+                    <select class="details__input" name="details-region" id="details-region">
+                        <option selected>00_Федеральный уровень</option>
+                    </select>
+                    <label for="details-service" class="details__label p-little">Сервис</label>
+                    <select class="details__input" name="details-service" id="details-service">
+                        <option selected>Не определено</option>
+                    </select>
+                    <label for="details-type" class="details__label p-little">Тип запроса</label>
+                    <select class="details__input" name="details-type" id="details-type">
+                        <option selected>Инцидент</option>
+                    </select>
+                    <label for="details-priority" class="details__label p-little">Приоритет</label>
+                    <select class="details__input" name="details-priority" id="details-priority">
+                        <option selected>1 - Критичный</option>
+                    </select>
+                    <label for="details-speed" class="details__label p-little">Скорость</label>
+                    <select class="details__input" name="details-speed" id="details-speed">
+                        <option selected>Критическая</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="details-status" class="details__label p-little">Статус</label>
+                    <p class="details__text" id="details-status">
+                        Выполняется
+                    </p>
+                    <label for="details-reason" class="details__label p-little">Причина состояния</label>
+                    <select class="details__input" name="details-reason" id="details-reason">
+                        <option selected>Запрошена информация</option>
+                    </select>
+                    <label for="details-level2" class="details__label p-little">Уровень 2</label>
+                    <select class="details__input" name="details-level2" id="details-level2">
+                        <option selected>ЕСИА</option>
+                    </select>
+                    <label for="details-level3" class="details__label p-little">Уровень 3</label>
+                    <select class="details__input" name="details-level3" id="details-level3">
+                        <option selected>АРМ ЦО</option>
+                    </select>
+                    <div class="details__check">
+                        <label for="details-info-sys" class="details__label p-little details__heading">Ведомственная
+                            ИС</label>
+                        <input type="checkbox" name="details-info-sys" id="details-info-sys">
+                    </div>
+                </div>
+                <div>
+                    <label for="details-group" class="details__label p-little">Назначенная группа / Исполнитель</label>
+                    <p class="details__text" id="details-group">
+                        Управление уровнем сервиса <br> Платонова Людмила И
+                    </p>
+                    <label for="details-owner" class="details__label p-little">Группа владельца</label>
+                    <p class="details__text" id="details-owner">
+                        Управление уровнем сервиса
+                    </p>
+                    <label for="details-initiator" class="details__label p-little">Инициатор</label>
+                    <select class="details__input" name="details-initiator" id="details-initiator">
+                        <option selected>Иванов А.А.</option>
+                    </select>
+                    <label for="details-recovery" class="details__label p-little">Восстановление</label>
+                    <select class="details__input" name="details-recovery" id="details-recovery">
+                        <option selected disabled class="details__placeholder">Выберите значение</option>
+                    </select>
+                    <div class="details__check">
+                        <label for="details-priority-high" class="details__label p-little details__heading">Повышен
+                            приоритет</label>
+                        <input type="checkbox" name="details-priority-high"
+                               id="details-priority-high">
+                    </div>
+                </div>
+                <div>
+                    <label for="details-creation" class="details__label p-little">Дата создания</label>
+                    <p class="details__text" id="details-creation">
+                        12.05.2018, 14:45:23
+                    </p>
+                    <label for="details-decision-time" class="details__label p-little">Целевое время решения</label>
+                    <p class="details__text" id="details-decision-time">
+                        12.09.18, 14:45:23
+                    </p>
+                    <label for="details-recovery-time" class="details__label p-little">Целевое время
+                        восстановления</label>
+                    <p class="details__text" id="details-recovery-time">
+                        12.09.18, 14:45:23
+                    </p>
+                    <label for="details-decision" class="details__label p-little">Дата решения</label>
+                    <p class="details__text" id="details-decision">
+                        12.09.18, 14:45:23
+                    </p>
+                    <label for="details-close" class="details__label p-little">Дата закрытия</label>
+                    <p class="details__text" id="details-close">
+                        12.09.18, close
+                </div>
+            </div>
+        </section>
+        <footer class="page-footer d-flex justify-content-around">
+            <div class="page-footer__data">
+                <p class="p-little">Даты</p>
+                <p><span class="p-little">Получено: </span>28.09.2018, 16:32</p>
+                <p><span class="p-little">Изменено: </span>28.09.2018, 16:56</p>
+                <p><span class="p-little">Закрыто: </span>28.09.2018, 17:20</p>
+            </div>
+            <div class="page-footer__section">
+                <div>
+                    <p class="p-little">Обьект</p>
+                    <p><span class="p-little">Хост: </span>hfuem7h8448.egov.local</p>
+                    <p><span class="p-little">Адрес: </span>169.254.254.255</p>
+                    <p><span class="p-little">Класс: </span>Hydrogen</p>
+                </div>
+                <div>
+                    <p><span class="p-little">Обьект: </span>Lorem ipsum dolor sit amet, consectetur<br> adipiscing
+                        elit,</p>
+                    <p><span class="p-little">Метрика: </span>Excepteur sint occaecat cupidatat non <br> proident, sunt
+                        in</p>
+                </div>
+            </div>
+            <div class="page-footer__section">
+                <div>
+                    <p class="p-little">ITSM</p>
+                    <p><span class="p-little">Зона: </span>Зона влияния инцидента</p>
+                    <p><span class="p-little">Сервис: </span>СКУФ автотест</p>
+                    <p><span class="p-little">Категория: </span>Hydrogen</p>
+                </div>
+                <div>
+                    <p><span class="p-little">№ инц: </span>743857394856</p>
+                    <p><span class="p-little">Статус: </span>Hydrogen</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<script src="js/script.js" type="module"></script>
+</body>
+</html>

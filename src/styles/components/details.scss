@@ -1,0 +1,45 @@
+@import "../elements/select";
+
+.details {
+  background-color: white;
+  margin-top: 25px;
+  border-radius: 4px;
+  padding: 15px 20px;
+  &__data {
+    div {
+      flex-grow: 1;
+    }
+  }
+
+  &__input, &__select {
+    display: block;
+    @include details();
+  }
+  &__input, &__select, &__text {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    padding: 3px 0;
+    margin: 5px 0;
+    width: 85%;
+    outline: none;
+  }
+  &__label {
+    padding-left: 2px;
+    margin: 5px 0 0 0;
+  }
+
+  &__theme {
+    width: 70%;
+    input {
+      width: 100%;
+    }
+  }
+
+
+  &__heading {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: normal;
+  }
+}

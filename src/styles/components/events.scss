@@ -1,0 +1,68 @@
+@import "../elements/search";
+@import "../elements/colors";
+
+.events {
+  &__options {
+    padding: 1px 10px;
+  }
+
+  &__alert {
+    color: $light-blue;
+  }
+
+  &__search {
+     @include search(285px, #f5f5f5, #717171)
+  }
+
+  &__table {
+    position: relative;
+    overflow: auto;
+    width: calc(90vw - 10px);
+    max-height: 320px;
+
+    table {
+      vertical-align: top;
+      white-space: nowrap;
+
+      tbody {
+        tr {
+          &:hover {
+            background-color: #eee;
+          }
+        }
+      }
+
+      th, tr, td {
+        padding: 12px 7px;
+
+        input[type=checkbox] {
+          margin-right: 5px;
+        }
+
+        label {
+          margin-top: 2px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &__incident {
+    color: $light-blue
+  }
+
+  &__footer {
+    padding: 5px 8px;
+  }
+
+  &__pagination {
+    display: flex;
+
+    button {
+      margin-top: -15px;
+    }
+  }
+}
+
+
+

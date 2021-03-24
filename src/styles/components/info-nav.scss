@@ -1,0 +1,80 @@
+@import "../elements/colors";
+
+.info__nav {
+  padding: 20px 10px;
+  background-color: $main-blue;
+  list-style-type: none;
+  margin: 30px -15px 0 -15px;
+    .nav__link {
+      color: rgba(255, 255, 255, 0.7);
+      margin-left: 20px;
+      cursor: pointer;
+      transition: color 0.3s;
+      label {
+        cursor: pointer;
+      }
+      &:hover {
+        color: white;
+      }
+    }
+}
+
+.label-active {
+  label {
+    color: white;
+  }
+  position: relative;
+  &:after {
+    content: '';
+    width: 100%;
+    display: block;
+    background-color: red;
+    height: 2px;
+    position: absolute;
+    bottom: -20px;
+  }
+}
+
+.info {
+  font-size: 0;
+  background-color: white;
+  padding: 0 15px;
+  margin-top: 30px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(42, 24, 62, 0.08), 0 4px 8px rgba(42, 24, 62, 0.08);
+  input[type="radio"] {
+    display: none;
+  }
+
+}
+
+
+.info>div {
+  /* скрыть контент по умолчанию */
+  display: none;
+}
+
+.info__tabs >label {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  padding: 2px 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  top: 1px;
+}
+
+.info__tabs>label:not(:first-of-type) {
+  border-left: none;
+}
+
+.info__tabs>input[type="radio"]:checked+label {
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
+}

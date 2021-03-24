@@ -1,0 +1,45 @@
+@import "../elements/search";
+@import "../elements/select";
+@import "../elements/colors";
+
+.page-header {
+  position: fixed;
+  width: 100%;
+  height: 55px;
+  top: 0;
+  padding: 0 15px;
+  z-index: 2;
+  //
+  background-color: $main-blue;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+  color: white;
+
+  &__menu-btn {
+    margin-right: 15px;
+  }
+
+  &__link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    &:hover {
+      color: white;
+    }
+  }
+  &__link--active {
+    border-bottom: solid 1px white;
+  }
+  &__options {
+    a, button, select {
+      display: block;
+    }
+  }
+  &__search {
+    @include search (310px, #0596ce, #8ccfe8)
+  }
+
+  &__user {
+    @include select()
+  }
+
+}

@@ -1,0 +1,12 @@
+@import "../elements/colors";
+
+.confirmation{
+  margin-top: 25px;
+  padding-right: 10px;
+  &__save {
+    color: $light-blue;
+  }
+  &__return {
+    color: #bbb
+  }
+}

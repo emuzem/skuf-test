@@ -1,0 +1,43 @@
+@import "components/page-header";
+@import "elements/buttons";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import "components/filters";
+@import "components/menu";
+@import "components/info-nav";
+@import "components/events";
+@import "elements/fonts";
+@import "components/confirmation";
+@import "components/details";
+@import "components/page-footer";
+@import "elements/colors";
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+
+  * {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+main {
+  background-color: #f6f5f6;
+  flex-grow: 1;
+  padding: 25px 20px;
+}
+
+.layout {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.checked {
+  background-color: #dce6ff;
+}

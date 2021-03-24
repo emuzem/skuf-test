@@ -1,0 +1,23 @@
+@import "../elements/colors";
+
+.btn-simple {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.btn-blue {
+  background-color: $light-blue;
+  color: #e6f7fe;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: transparent;
+    color: $light-blue;
+    box-shadow: 0 0 5px $light-blue;
+  }
+}
